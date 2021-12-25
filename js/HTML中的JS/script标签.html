@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">、
+    <script async src=".."></script>
+    <title>Document</title>
+    <!-- 
+        推迟执行脚本
+        defer 属性，表示在执行的时候不会影响页面结构，这个脚本完全可以在页面解析完之后在运行。在script标签中加入defer属性，会告诉浏览器立即执行下载，但执行应该推迟到页面加载完之后
+        defer 支队外部脚本才有效，部分浏览器不支持，所以把这个标签放在body后面执行比较好
+        
+
+        异步执行脚本-async
+        同样适用于外部脚本，告诉浏览器不必等脚本下载或执行完后在加载页面。异步脚本不应该在加载期间修改DOM
+        好的开发实践不推荐使用这个方法。
+        async 使用场景是加载和这个页面无关的js文件时使用。
+
+        动态加载脚本，可能会严重影响性能。
+
+     -->
+</head>
+<body>
+    <script defer src="....js"></scrip>
+
+</body>
+</html>
