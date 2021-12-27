@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        \n 换行  \r 回车
+        一个转义字符是一个字符，长度为1.
+        字符串是不可变的，一旦创建，他们的值就不能变了，要修改某个变量的字符串值，必须先销毁，然后保存到另一个字符串中。
+        转换字符串的集中方法：
+            1. toString(), 所有值都可以使用这个方法，除了null和undefined。
+            2. String(), 这个方法适用于所有的值。包括null和undefined。如果是null返回null，如果是undefined那么返回undefined。
+            3. 使用+号
+        模板字面量 ``,模板字面量可以进行换行。模板字面量其实是js语法表达式，做常用的是字符串插值。正因为模板字面量是js，所以，在模板字面量中可以使用函数和方法
+        String.raw(), 知道模板字面量有标签函数，并且可以通过这个标签函数获取 转义字符 真实值。比如 \r  \n
+     -->
+    <script>
+
+    </script>
+</head>
+<body>
+    <script>
+        let str1 = `nihao\r\nwobuhao`
+        console.log(str1);
+        console.log(str1.length);
+        // console.log(null.toString());
+
+        let str2 = `nihaoa
+xiaoming`
+        console.log(str2);
+        let pageHtml = `
+        <div>
+            <span>JACK</span>
+        </div>
+        `
+        console.log(pageHtml);
+    </script>
+</body>
+</html>
