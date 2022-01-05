@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        一元加和一元减操作符会将 类型转为 number。
+        一元加和减操作符主要用来算数，也可以用来类型转换，5UI偶朋友【】、、听听歌分割VB
+
+        ！！两个逻辑非操作符 相当于调用了 Boolean（）函数，始终返回一个boolean值。
+        && 两个逻辑与 并不一定会返回一个Boolean值，两个&& 有短路效果。
+
+        if()后面跟上两个 逻辑与&& 或者两个逻辑或|| ， 其实不是返回的true 和false，首先会返回 它的 值，进行转成 boolean类型。
+
+        乘，除，运算符在运算的时候，首先会调用Numbner（）方法，将变量转为数值。然后在运算；
+     -->
+    <script>
+        // 一元操作符
+        let s1 = '2'
+        // s1 = s1 + 1;
+
+        console.log(s1 + 1);
+        console.log(s1++);
+        // 一元加操作符
+        console.log(+'12');
+        console.log(+'009');
+        console.log(+false);
+        console.log(+null);
+        console.log(+'M'); // NaN
+        console.log(+undefined); // Nan
+        if(!NaN) {
+            console.log('Nan也可以使用逻辑非运算符');
+        }
+
+        console.log(NaN && 111);
+        console.log(!!NaN && 111);
+        console.log();
+
+
+        let obj1 = {
+            name: '张三',
+            age: 12
+        }
+        console.log(obj1 || false);
+
+        console.log(obj1 && 1123);
+        console.log(123 && obj1);
+        console.log(12323 && 'dsfd');
+
+        console.log('dsf' * 1);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
