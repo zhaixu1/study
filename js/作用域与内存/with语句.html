@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = {
+            name: 'Lisi',
+            age: 3435
+        };
+        with (obj) {
+            console.log(obj, 'objj');
+            var name = "张三";
+            var car = "baoma"
+        }
+        console.log(obj);
+
+        // var foo = 1;
+        // var bar = {
+        //     foo: 2
+        // }
+        // with (bar) {
+        //     alert(foo);
+        //     foo = 3;
+        //     alert(foo);
+        //     var foo = 4;
+        //     alert(foo)
+        // }
+        // alert(bar.foo, 'bar.foo');
+        // alert(foo);
+        // if (true) {
+        //     foo = 5;
+        // }
+        // alert(foo);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

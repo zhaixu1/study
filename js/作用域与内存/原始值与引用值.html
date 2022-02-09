@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        原始类型只能使用字面量的方式，引用数据类型可以使用new 方式。如果原始数据类型使用字面量的方式那么就相当于创建了一个对象，那么对象就会有属性和方法
+        在方法中传递参数（复杂数据类型）是按值传递的，不是引用。这里参考85页78967y6tt5
+     -->
+</head>
+<body>
+    <script>
+        console.log(new Object());
+
+        let num = new Number(23)
+        let num2 = 34
+        console.log(num);
+        console.log(num2);
+        num.name = 'zhangsan'
+        num2.name = 'lisi'
+        console.log(num.name);
+        console.log(num2.name);
+        console.log(num + num2);
+
+
+        console.log(num2 instanceof Object);
+    </script>
+</body>
+</html>

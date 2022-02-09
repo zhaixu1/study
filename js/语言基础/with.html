@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        with 语句-主要应用场景是对 一个对象反复进行操作。这时候将代码作用域设置为该对象能提供便利，如下。
+     -->
+     <script>
+         let obj = {
+             name: 'zhandan',
+             age: 24
+         }
+         let name1 = obj.name;
+         let age1 = obj.age;
+
+         with(obj) {
+             var name2 = name;
+             var age2 = age;
+         }
+         console.log(name1, age1);
+         console.log(name2, age2);
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
