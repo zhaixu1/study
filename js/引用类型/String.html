@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        string方法
+        1。 concat 方法。 stringValue.concat('1112', 'sdfdf').可以链接多个。
+        2. slice, subStr, subString 都是截取字符串的方法。 
+        这里要注意下如果 str.substr(2, 3), 第二个参数是要取的值；（）括号中使用两个的时候要注意。如果有任何一个有负值，那么有一定规则。
+        3. indexof 和 lastIndexOf ： 字符串位置方法 , 一个是从正面开始查找，另一个是从后面开始查找。使用indexOf 可以查找字符串中某个字符中的坐标。
+        4. startsWith(), includes(), 字符串包含方法。 endsWith()
+        startsWith()只是从第一个开始进行匹配，第一个如果没有匹配上那么就是false ，如下
+        includes(), 只要是包含就返回true，不包含返回false。
+        endsWith()通startsWith()方法，在后面如果没有匹配上那么就返回false
+        5. trim() 方法。会删除字符串前后的空格,中间的空格不会删除。返回一个新的字符串。
+        6. str.repeat(12) // 复制12次，并返回结果。
+        7. str.padStart(6, '.') 复制6个字符，没有不够的话使用。填充。  str.padEnd()
+        8. str。toLowerCast()  str.toUpperCase(), 转换成小写，大写字符串。
+        9. str.match(pattern), 匹配相当于 RegExp， str.replace(pattern, '')将符合pattern规则的字符串替换成'''
+        10. str.split(), 用于把一个字符串分割成字符串数组。
+        11. str1.localCompare(str2), 比较两个字符串，根据字母排序进行比较。9089yu
+     -->
+</head>
+<body>
+    <script>
+        let str = 'hello world'
+        console.log(str.slice(4, -2)); // 相当于str.slice(4, 9) o worl
+        console.log(str.substr(4, -3)); // 相当于 str.substr(4, 0)  ''
+        console.log(str.substring(4, -2)); // 相当于 str.substring(4, 0) ''
+
+
+        console.log(str.startsWith('e')); // false
+        console.log(str.startsWith('hell')); // true
+
+        console.log(str.includes('llo')); // true
+
+        console.log(str.endsWith('ld')); // true
+        console.log(str.endsWith('l')); // false
+
+        const str2 = ' heellll sdf sdf sdf ddd    '
+        console.log(str2);
+        console.log(str2.trim());
+
+
+
+        const str3 = 'cat hello vat hat asb'
+        const pattern1 = /at/
+        console.log(str3.match(pattern1));
+        console.log(pattern1.exec(str3));
+
+        console.log(str3.split('a'));
+    </script>
+</body>
+</html>

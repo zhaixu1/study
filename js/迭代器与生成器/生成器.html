@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        生成器的形式是一个函数，函数名称前面加一个*号，表示他是一个生成器。只要是可以定义函数的地方就可以定义生成器。；
+     -->
+     <script>
+         function* fun1() {}
+         console.log(fun1);
+         let obj = {
+             fun1: function() {
+                 console.log('hhh');
+             },
+             fun2() {
+                console.log('fun2');
+             }
+         }
+         obj.fun1()
+         obj.fun2()
+
+         function funA() {
+             console.log('aaa');
+         }
+         let a = funA();
+         let b = funA();
+         console.log(a);
+         console.log(b);
+         console.log(a == b);
+        //  创建生成器对象
+         function* gentrator() {
+            yield 1;
+            yield 2;
+            yield 3;
+            return 5
+         }
+         console.log(gentrator());
+         let g1 = gentrator()
+         console.log(g1);
+         console.log(g1.next());
+         console.log(g1.next());
+         console.log(g1.next());
+         console.log(g1.next());
+         for (const item of gentrator) {
+             console.log(item);
+         }
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

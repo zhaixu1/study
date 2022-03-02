@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        对象：是一组没有特定顺序的值。
+        创建对象的方式：
+        1. new Object()
+        2. 使用字面量的方法。
+        属性都有自己的特征，这些特征决定了他们在js中的行为。
+        属性分为两种：数据属性和访问器属性。
+        数据属性包含一个保存数据值的位置，值会从这个位置读取，也会写入到这个位置。数据属性有四个特征描述他们的行为，分别是：【【Configurable】】,[[Enumberable]],[[writable]],[[value]].
+        如果要更改数据属性的这四个特征，那么必须使用Object.defineproperty()来更改。这个函数接收三个参数，分别是：对象，对象的属性，以及要改变的特征。
+        访问器属性：不包含数据值，相反，他们包含一个获取函数（getter）和设置函数（setter)，不过着两个函数不是必须的。
+        属性的特征只能是访问数据属性和访问器属性中的一种，给已有的数据属性添加set和get时，其数据属性中value和 writable就会被废弃。给一有的访问器属性设置 value和wirtable时，set和get就会被废弃。只能存一个。
+
+        Object.assign('目标对象'， '源对象')，浅拷贝。
+        Object.is(obj1,obj2)
+     -->
+     <script>
+         let person = { };
+         Object.defineProperty(person, 'name', {
+             configurable: true,
+             value: '张三',
+
+         })
+         console.log(person);
+         console.log(Object.getOwnPropertyDescriptor(person, 'name'));
+         delete person.name
+         console.log(person);
+
+         let stu = {}
+         Object.defineProperties(stu,
+            {name: {
+                get() {
+                    return '李四'
+                }
+            }}
+         )
+         console.log(stu.name);
+         console.log(Object.getOwnPropertyDescriptor(stu, 'name'));
+         let a = {name: 'sdf'}
+         console.log(Object.keys(a));
+
+         let obj01 = {};
+         obj01 = {
+             get name() {
+                return 'hello'
+             },
+             set name(x) {
+                 console.log(x, 'xxxxx');
+             }
+         }
+         let obj02 = {name: '张三', 3 : '李四'};
+         console.log(obj01);
+         console.log(obj02);
+         Object.assign(obj01, obj02)
+         console.log(obj01);
+         obj01[3] = '王五';
+         console.log(obj01);
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

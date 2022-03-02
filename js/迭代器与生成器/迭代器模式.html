@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+
+     -->
+     <script>
+         let num = 23
+         let str = '3232';
+         let obj = {'name': 'zhangsan'};
+         console.log(num[Symbol.iterator], 'num');
+         console.log(str[Symbol.iterator], 'str');
+         console.log(obj.hasOwnProperty('name'), 'obj');
+
+         let arr = ['你好','s世界','我来了' ]
+         let iter = arr[Symbol.iterator]()
+         console.log(iter, 'arr');
+         console.log(iter.next());
+         console.log(iter.next());
+         console.log(iter.next());
+         console.log(iter.next());
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

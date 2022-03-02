@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 再给字符串或者int或者boolean添加属性或者调用方法会创建new 一个对象，然后进行操作
+        引用类型和原始值包装类型的区别在于生命周期。引用类型会在变量离开作用域时销毁，也就是离开上下文会被销毁，但是原始值包装类型只存在于执行的哪行代码中，也就意味着不能在运行期间给这个值赋值。
+
+        所有对象在布尔表达式中都是true， 包括 new Boolean(false)， 建议永远不要使用Boolean（）
+
+        Number.isInterger()方法用于辨别是否保存为整数。
+     -->
+     <script>
+         var string1 = 'namesdf';
+         string1.name = 'zhangsan';
+         console.log(string1); // nameasf
+         console.log(string1.name); // undefined
+
+         let a = true;
+         console.log(a.toString());
+         console.log(a.valueOf());
+
+         let b = false;
+         let b1 = new Boolean(false)
+         console.log(b, b1);
+         console.log(b.valueOf(), b1.valueOf()); // 布尔值 false
+         console.log(b.toString(), b1.toString()); // 字符串 都是false
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

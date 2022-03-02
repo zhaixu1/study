@@ -22,7 +22,14 @@
      -->
 </head>
 <body>
-    <script defer src="....js"></scrip>
-
+    <div id="a"></div>
+    <script defer >
+        console.log(22222);
+    </script>
+    <script>
+        setTimeout(() => {
+            document.getElementById('a').innerHTML = 'sdfdsf'
+        }, 1000)
+    </script>
 </body>
 </html>

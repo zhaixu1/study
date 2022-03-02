@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        1. 对象简写， 如果属性名和属性值是一样的，并且属性值代表一个变量，那么就可以。
+        2，可计算属性，就是对象可以使用中括号【】，这里面是js表达式。54
+     -->
+     <script>
+         let name = 'zhangsan'
+         let obj = {
+             name: name
+         }
+         let person = {
+             name: '王老师',
+             age: 43,
+             car: '宝马'
+         }
+         let { car } = person
+         let { nv="王思思"} = person
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

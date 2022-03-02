@@ -7,14 +7,14 @@
     <title>Object</title>
     <!-- 
         Object 是一组数据和功能的集合
-
+        valueOf和 toString() valueOf返回的是 该对象的原始值， tostring()是将原始值已对象形式返回
      -->
      <script>
          let obj = new Object()
          obj.name = 'zhangsan'
          console.log(obj.hasOwnProperty('name')); // true/.
-         console.log(obj.toString());
-         console.log(obj.valueOf());
+         console.log(obj.toString()); // [Object, object]
+         console.log(obj.valueOf()); // {name: zhangsan}
      </script>
 </head>
 <body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        内置对象： "全局对象"（或标准内置对象）不应与global对象混淆。这里的"全局对象"指的是处在全局作用域里的多个对象。
+        URL编码方法：encodeURI 和 encodeURIComponent, 解码 decodeURI和 decodeURIComponent
+        eval方法，就是一个完整的ES解释器，它接收一个参数，即一个要执行的js字符串。
+        Global对象，是全局对象,所有的内置函数和属性Global对象中都包含。
+        虽然es不能直接访问Global对象，但是浏览器将window对象实现为global对象的代理。因此，所有全局作用域中声明的变量和函数都变成了window的属性。
+ 。、
+        this指向问题，  6
+     -->
+     <script>
+         var a = 12;
+         console.log(this);
+         console.log(this.a);
+
+         const url = "http://www.baicu.com/ abc/sb11.cn"
+         console.log(encodeURI(url));
+         console.log(encodeURIComponent(url));
+         const url1 = encodeURI(url);
+         const url2 = encodeURIComponent(url);
+         console.log(decodeURI(url1));
+         const url3 = decodeURIComponent(url2)
+         console.log(url3); 
+
+
+         eval("console.log(11)")
+        //  eval("window.alert('2222')")
+
+
+        //  this指向问题
+        // 全局上下文中的this指向了window，也就是Global
+        let global = function() {
+            return this
+        }()
+        console.log(global);
+        // 全局上下文中的定义的方法，指向window
+        function fun() {
+            console.log(this, 222);
+            return this
+        }
+        let this1 = fun()
+        console.log(this1); // window
+
+        var obj = {
+            name: "张三",
+            eat: function(){
+                console.log(this, 111); // 
+                console.log("吃饭了");
+            }
+        }
+        obj.eat() // 指向了 obj对象
+
+        var obj1 = new obj();
+        obj1.eat()
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

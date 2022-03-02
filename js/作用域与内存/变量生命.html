@@ -5,6 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 
+        使用var生命的迭代变量会泄露到外部
+        Object.freeze() 可以固定值，配合const 赋值 为对象使用。
+        多使用let，const生命变量， 直接生命会挂载到window上。
+        闭包函数一定要注意内存，垃圾回收机制不好清理。
+     -->
+    <script>
+        // 
+    </script>
     <script>
         var sum;
         function add(a, b) {
@@ -14,6 +23,22 @@
         let result = add(10, 20);
         console.log(sum);
         console.log(result, 'result');
+
+        const obj = {}
+        console.log(obj, 'obj');
+        obj.name = 'lisi'
+        console.log(obj);
+
+        const obj1 = Object.freeze({name: 'lisi', age: 23})
+        console.log(obj1);
+        obj1.name = 'sdfds'
+        console.log(obj1);
+
+
+        name = 'jack';
+        console.log(window.name);
+
+        console.log(window.history);
     </script>
 </head>
 <body>
