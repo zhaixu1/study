@@ -1,0 +1,31 @@
+】’【、
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        1. 函数表达式和函数生命是两种不同的方式，函数表达式 let Person() = function(){}, 函数声明 function Person() {}
+        2. 创建构造函数的时候如果里面有fun，那么也需要this指向一下，不然实例中会没有。比如 this.eat() = function() {}
+        3. hasOwnProperty() 方法可以确定是否对象是否有这个自身（实例）的属性，如果通过原型查找的属性那么就会返回false；
+        4. in操作符可以判断这个对象中是否有这个属性，比如 let Person = function(){} Person.name = 1; let p1 = new Person();log('name' in Pers) 这里会返回false，因为实例对象中没有name属性
+        5. Object.keys() 获取对象中所有的key值， Object.values()获取对象中所有的value值。
+        6. 继承包含两种继承，接口继承和实现竭诚。 前者只继承方法签名，后者继承实际的方法。
+        7. 继承的几种方法：原型链继承、构造函数继承、组合继承、原型式继承、寄生式继承、寄生组合继承。
+        8. class c创建类有两种。类声明和类表达式
+        9. 创建类的时候，不需要在类表达式中传入参数，直接在实例中传入参数就是 contructor的参数
+        10. static 声明的静态类只在类有效，实例中会没有 Person.create(); 静态类方法非常适合做实例工厂。
+        11. 不能单独使用super()关键字，要么使用它调用父类的构造函数，要么用它引用静态方法。
+        12. Proxy 代理，const proxy = new Proxy(target, handler), target目标对象，handler 处理程序对象。在代理对象上执行的任何操作实际上都会应用到目标对象。唯一可感知的不同就是代码中操作的是代理对象。对代理对象proxy的任何读写都会反映到目标对象上，
+        13. 反射函数，Reflect(),内置对象，有很多方法可以使用，比如 Reflect.defineProperty()、set等等。反射方法可以进行状态标记，返回true或者false可以看出一些端倪。
+        14. 撤销代理 revocable() 和 revoke() 函数。 const { proxy, revoke} = Proxy.revocable(target, handler)
+        15. Object.create() 创建一个新对象，并将传入的对象作为原型。    
+        16. 函数默认参数值 fun(name = 'jack'),函数默认参数根let关键字顺序声明变量一样
+        17. 类定义语法吧类块中定义的方法作为原型方法，把在构造函数中定义的作为实例方法或者属性。
+     -->
+</body>
+</html>

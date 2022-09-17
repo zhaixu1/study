@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 构造函数继承
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.car = '宝马'
+            this.cars = [1,2]
+            this.study = function() {
+                console.log(`${this.name}还在学习啊`);
+            }
+        }
+        Person.prototype.eat = function() {
+            console.log('水电费水电费');
+        }
+        function Son(name,age) {
+            Person.call(this,name,age)
+        }
+        const s2 = new Son('小红', 33)
+        const s3 = new Son('小明', 233)
+        s2.study()
+        s3.study()
+        // s2.eat() // 报错,不能继承构造函数的原型对象。
+        console.log(s2.car); // baoma
+        s2.car = '奔驰'
+        console.log(s2.car);
+        console.log(s3.car);
+        console.log(s2.cars);
+        s2.cars.push(222)
+        console.log(s2.cars);
+        console.log(s3.cars);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

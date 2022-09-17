@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun() {
+            return 123
+        }
+        fun()
+        let sum = x => x+2;
+        console.log(sum(2));
+
+        function foo() {};
+        let bar = function() {};
+        console.log(foo.name);
+        console.log(foo.bind(null).name);
+        let dog = {
+            years: 1,
+            get age() {
+                return this.years
+            },
+            set age(newVal) {
+                this.years = newVal
+            }
+        }
+        console.log(dog);
+        dog.age = 'sdfdsqqqqf'
+        console.log(dog);
+        let p = Object.getOwnPropertyDescriptor(dog, 'age')
+        console.log(p.get.name);
+    </script>
+</body>
+</html>

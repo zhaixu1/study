@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="./babel.min.js"></script>
+    <script type="text/javascript" src="./react.development.js"></script>
+    <script type="text/javascript" src="./react-dom.development.js"></script>
+    <script type="text/babel">
+		//1.创建组件
+		class Person extends React.Component{
+            state = {
+                person: [
+                    {id: 1, name: '小张',age: 18},
+                    {id: 2, naem: '小李', age: 23}
+                ]
+            }
+            add = ()=> {
+                const {person} = this.state
+            }
+            render() {
+                return (
+                    <div>
+                        <h2>展示人员信息</h2>
+                        <button onClick="this.add"></button>
+                        <ul>
+                            <li>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                )
+            }
+        }
+		//2.渲染组件到页面
+		ReactDOM.render(<Weather/>,document.getElementById('test'))
+    </script>
+</head>
+<body>
+    <div id="test"></div>
+</body>
+</html>

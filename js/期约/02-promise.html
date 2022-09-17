@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p1 = new Promise( () => {})
+        console.log(p1);
+
+        let p2 = new Promise( (resolve, reject) => {
+            resolve()
+        })
+        console.log(p2);
+
+        let p3 = new Promise( (resolve, reject) => {
+            reject()
+        })
+        console.log(p3);
+
+        let p4 = new Promise( (resolve, reject) => {
+            console.log('first');
+            resolve('first')
+        })
+        p4.then( (val) => {
+            console.log(val, 'val');
+            return new Promise( resolve => {
+                resolve('可以收到吧')
+                setTimeout(() => {
+                    console.log('十秒钟过去了');
+                }, 10000);
+            })
+        }).then( val => {
+            console.log('third');
+            console.log(val);
+        })
+
+        async function foo() {
+            return 1234567
+        }
+        foo().then( res => {
+            console.log(res);
+        })
+        console.log(foo(), '@foo');
+    </script>
+</body>
+</html>

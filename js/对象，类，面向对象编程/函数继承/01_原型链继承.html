@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name
+            this.age = age
+             this.eat = function() {
+                console.log(`${this.name}今年${this.age}岁了`)
+            }
+        }
+        function Son(name, age) {
+
+        }
+        Son.prototype = new Person()
+        const s1 = new Son('小红', 23)
+        s1.eat()
+        // 此时是有问题的，不能传递参数，第二个是多个子类实例公用一个引用值。
+    </script>
+</body>
+</html>

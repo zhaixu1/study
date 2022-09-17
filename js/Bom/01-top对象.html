@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="hh">
+
+    </div>
+    <script>
+        let div = document.getElementById('hh')
+        console.log(top);
+        console.log(top == window); // true
+        console.log(parent);
+        window.moveTo(0, 100)
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+        console.log(document.documentElement.clientHeightS);
+        window.resizeTo(100, 100)
+
+        console.log(navigator);
+    </script>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .hh {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #eee;
+        }
+    </style>
+</body>
+</html>

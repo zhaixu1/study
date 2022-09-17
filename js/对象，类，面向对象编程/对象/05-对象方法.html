@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        对象枚举
+        for-in  Object.keys(). Object.assign(target, source)
+     -->
+     <script>
+        //  
+        function Person() {}
+        Person.prototype = {
+            name: 'jack',
+            age: '22',
+            eat() {
+                console.log('我爱吃哈哈哈');
+            }
+        }
+
+        function Student() {}
+        Student.prototype.name = 'rose'
+        console.log(Student);
+        console.log(Person);
+        console.log(Student.prototype.constructor);
+        console.log(Person.prototype.constructor);
+        
+        let p1 = new Person()
+        let s1 = new Student()
+        console.log(p1.constructor === Person);
+        console.log(s1.constructor === Student);
+
+        
+     </script>
+</head>
+<body>
+    
+</body>
+</html>

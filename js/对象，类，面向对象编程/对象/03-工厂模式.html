@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        工厂模式
+     -->
+</head>
+<body>
+    <script>
+        function createPerson(name, age, job) {
+            let o = new Object();
+            o.name = name;
+            o.age = age;
+            o.job = job;
+            o.eat = function() {
+                console.log(name + '----' + age);
+            }
+            return o;
+        }
+        let p1 = new createPerson('zhangsan', 23 , 'it')
+        let p2 = new createPerson('lisi', 24, 333)
+        console.log(p1);
+        console.log(p2);
+        console.log(p1.__proto__);
+        p1.eat()
+
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.eat = function () {
+                console.log(this.name + '====' + '吃屎了哈哈');
+            }
+        }
+        console.log(Person.prototype);
+        // new 构造函数发生了什么
+        // 1. 创建对象，并把构造函数的protoType给 新对象的__proto__, 也就是原型对象上。
+        let obj = Object.create(Person.prototype)
+        console.log(obj, 'objd');
+        console.log(obj.__proto__);
+        // 2. 将构造函数的this 赋值给这个新对象
+        let ret = Person.call(obj, 'zhangsan', 99)
+        console.log(ret, 'ret');
+
+        let obj2 = {};
+        Person.call(obj2)
+        console.log(obj2);
+    </script>
+</body>
+</html>
